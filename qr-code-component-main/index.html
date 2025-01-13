@@ -1,28 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | QR code component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    :root {
+      --color-white: hsl(0, 0%, 100%);
+      --color-slate-300: hsl(212, 45%, 89%);
+      --color-slate-500: hsl(216, 15%, 48%);
+      --color-slate-900: hsl(218, 44%, 22%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .section-bg {
+      height: 100vh;
+      background-color: var(--color-slate-300);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-container {
+      width: 320px;
+      padding: 16px;
+      border-radius: 20px;
+      background-color: var(--color-white);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 25px 25px 0 hsla(0, 0%, 0%, 0.0477);
+    }
+
+    .card-qr-code {
+      width: 288px;
+      height: 288px;
+      border-radius: 10px;
+    }
+
+    .card-text-container {
+      margin: 24px 0;
+      padding: 0 16px;
+    }
+
+    .card-heading {
+      margin-bottom: 16px;
+      text-align: center;
+      font-family: "Outfit", serif;
+      font-optical-sizing: auto;
+      font-size: 22px;
+      line-height: 120%;
+      letter-spacing: 0;
+      font-weight: 700;
+      color: var(--color-slate-900);
+    }
+
+    .card-text { 
+      text-align: center;
+      font-family: "Outfit", serif;
+      font-optical-sizing: auto;
+      font-size: 15px;
+      line-height: 140%;
+      letter-spacing: 0.2px;
+      font-weight: 400;
+      color: var(--color-slate-500)
+    }
+
+    .attribution {
+      padding: 15px 0;
+      text-align: center;
+      color: var(--color-white);
+      background-color: hsl(228, 45%, 44%);
+      font-family: "Outfit", serif;
+      font-size: 12px;
+    }
+
+    .attribution a {
+      color: var(--color-slate-300)
+    }
   </style>
 </head>
 <body>
+  <section class="section-bg">
+    <article class="card-container">
+      <img src="images/image-qr-code.png" alt="qr-code" class="card-qr-code" />
+      <div class="card-text-container">
+        <h2 class="card-heading">
+          Improve your front-end skills by building projects
+        </h2>
+        <p class="card-text">Scan the QR code to visit Frontend Mentor and take your coding skills to the next
+          level</p>
+      </div>
+    </article>
+  </section>
 
-  Improve your front-end skills by building projects
-
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/neo-the-coder">neo-the-coder</a>.
   </div>
 </body>
 </html>
