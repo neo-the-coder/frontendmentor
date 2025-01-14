@@ -1,6 +1,7 @@
 :root {
   --color-green: hsl(75, 94%, 57%);
   --color-white: hsl(0, 0%, 100%);
+  --color-gray-600: hsl(0, 0%, 30%);
   --color-gray-700: hsl(0, 0%, 20%);
   --color-gray-800: hsl(0, 0%, 12%);
   --color-gray-900: hsl(0, 0%, 8%);
@@ -18,15 +19,106 @@ html {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  letter-spacing: 0.2px;
 }
 
+.main {
+  min-height: 100vh;
+  background-color: var(--color-gray-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.socials__container {
+  background-color: var(--color-gray-800);
+  color: var(--color-white);
+  width: 345px;
+  border-radius: 10px;
+  margin: 36px;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-.attribution {
-  font-size: 11px;
+.socials__header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.socials__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  margin-bottom: 24px;
+}
+
+.socials__name {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.socials__location {
+  margin-bottom: 20px;
+  color: var(--color-green);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.socials__description {
+  font-size: 12px;
+  margin-bottom: 20px;
+  letter-spacing: 0;
+}
+
+.socials__nav {
+  width: 100%;
+}
+
+.socials__nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  row-gap: 14px;
+}
+
+.socials__nav-item {
+  background-color: var(--color-gray-700);
+  border-radius: 8px;
   text-align: center;
 }
 
+.socials__nav-link {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.socials__nav-item:hover {
+  background-color: var(--color-gray-600);
+
+  .socials__nav-link {
+    color: var(--color-green);
+  }
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  color: var(--color-white);
+  background-color: var(--color-gray-800);
+  padding: 24px;
+}
+
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--color-green);
 }
