@@ -19,8 +19,8 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: [GitHub repo](https://github.com/neo-the-coder/frontendmentor/qr-code-component-main)
-- Live Site URL: [GitHub Page](https://neo-the-coder.github.io/frontendmentor/qr-code-component-main)
+- [Solution URL](https://github.com/neo-the-coder/frontendmentor/tree/main/qr-code-component-main)
+- [Live Site URL](https://neo-the-coder.github.io/frontendmentor/qr-code-component-main)
 
 ## My process
 
