@@ -33,8 +33,8 @@ Desktop             |  Mobile
 
 ### Links
 
-- Solution URL: [GitHub repo](https://github.com/neo-the-coder/frontendmentor/blog-preview-card-main)
-- Live Site URL: [GitHub Page](https://neo-the-coder.github.io/frontendmentor/blog-preview-card-main)
+- [Solution URL](https://github.com/neo-the-coder/frontendmentor/tree/main/blog-preview-card-main)
+- [Live Site URL](https://neo-the-coder.github.io/frontendmentor/blog-preview-card-main)
 
 ## My process
 
