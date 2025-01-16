@@ -5,14 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preload" href="./assets/fonts/young-serif/YoungSerif-Regular.ttf" as="font" crossorigin />
+  <link rel="preload" href="./assets/fonts/outfit/Outfit-VariableFont_wght.ttf" as="font" crossorigin />
+  <link rel="stylesheet" href="./styles.css" />
   
   <title>Frontend Mentor | Recipe page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <main class="recipe-card">
@@ -28,7 +25,7 @@
 
     <section class="prep-time">
       <h2 class="prep-time-heading">Preparation time</h2>
-      <ul class="list">
+      <ul class="prep-list">
         <li class="list-item">
           <strong class="list-item-strong">Total:</strong> Approximately 10 minutes
         </li>
@@ -43,7 +40,7 @@
 
     <section class="ingredients">
       <h2 class="heading">Ingredients</h2>
-      <ul class="list">
+      <ul class="ingredients-list">
         <li class="list-item">2-3 large eggs</li>
         <li class="list-item">Salt, to taste</li>
         <li class="list-item">Pepper, to taste</li>
@@ -72,9 +69,10 @@
       <h2 class="heading">Nutrition</h2>
       <p class="text">The table below shows nutritional values per serving without the additional fillings.</p>
       <table class="table">
+        <tbody class="table-body">
           <tr class="table-row">
             <th class="table-heading text">Calories</th>
-            <td class="table-data">277 kcal</td>
+            <td class="table-data">277kcal</td>
           </tr>
           <tr class="table-row">
             <th class="table-heading text">Carbs</th>
@@ -88,6 +86,7 @@
             <th class="table-heading text">Fat</th>
             <td class="table-data">22g</td>
           </tr>
+        </tbody>
       </table>
     </section>
 

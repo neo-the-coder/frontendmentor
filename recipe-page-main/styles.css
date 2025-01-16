@@ -1,0 +1,237 @@
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-stone-100: hsl(30, 54%, 90%);
+  --color-stone-150: hsl(30, 18%, 87%);
+  --color-stone-600: hsl(30, 10%, 34%);
+  --color-stone-900: hsl(24, 5%, 18%);
+  --color-brown-800: hsl(14, 45%, 36%);
+  --color-rose-800: hsl(332, 51%, 32%);
+  --color-rose-50: hsl(330, 100%, 98%);
+  --font-young-serif: "Young Serif", serif;
+  --font-outfit: "Outfit", serif;
+}
+
+@font-face {
+  font-family: "Young Serif";
+  font-weight: 400;
+  font-variant: normal;
+  font-display: swap;
+  src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Outfit';
+  font-weight: 400 700;
+  font-variant: normal;
+  font-display: swap;
+  src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--color-stone-100);
+}
+
+ul,
+ol {
+  margin-left: 15px;
+  list-style-position: outside;
+}
+
+hr {
+  margin: 32px 0 34px;
+  background-color: var(--color-stone-150);
+  height: 1px;
+  border: none;
+}
+
+.heading {
+  font: 400 28px/100% var(--font-young-serif);
+  color: var(--color-brown-800);
+  margin: 24px 0;
+}
+
+.text,
+li.list-item {
+  font: 400 16px/150% var(--font-outfit);
+  color: var(--color-stone-600);
+}
+
+main.recipe-card {
+  max-width: 735px;
+  margin: 0 auto;
+  padding: 40px 40px 30px;
+  border-radius: 30px;
+  background-color: var(--color-white);
+}
+
+figure.recipe-image-container {
+  height: 300px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+
+.recipe-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+h1.recipe-name {
+  margin: 24px 0;
+  font: 400 40px/100% var(--font-young-serif);
+  color: var(--color-stone-900);
+}
+
+section.prep-time {
+  background-color: var(--color-rose-50);
+  border-radius: 12px;
+  padding: 28px;
+  margin: 32px 0;
+}
+
+h2.prep-time-heading {
+  font: 600 20px/100% var(--font-outfit);
+  color: var(--color-rose-800);
+  margin-bottom: 16px;
+}
+
+ul.prep-list li.list-item::marker {
+  color: var(--color-rose-800);
+}
+
+li.list-item {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+li.list-item::marker {
+  font: 700 16px/150% var(--font-outfit);
+  color: var(--color-brown-800);
+}
+
+li.list-item:last-child {
+  margin-bottom: 0;
+}
+
+ul.ingredients-list {
+  color: var(--color-brown-800);
+  list-style-type: square;
+}
+
+ol.list {
+  list-style-type: decimal;
+}
+
+table.table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+tr.table-row:not(:last-child) {
+  border-bottom: 1px solid var(--color-stone-150);
+}
+
+th.table-heading,
+td.table-data {
+  padding: 12px 0;
+  font: 500 16px/150% var(--font-outfit);
+}
+
+th.table-heading {
+  width: 50%;
+  padding-left: 32px;
+}
+
+td.table-data {
+  font-weight: 700;
+  color: var(--color-brown-800);
+}
+
+.attribution {
+  margin-top: 40px;
+  padding: 20px;
+  font-family: var(--font-outfit);
+  font-size: 14px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--color-rose-800);
+}
+
+@media only screen and (max-width: 600px) {
+  main.recipe-card {
+    padding: 0 0 30px;
+  }
+  
+  main.recipe-card, figure.recipe-image-container, .recipe-image {
+    border-radius: 0;
+  }
+
+  figure.recipe-image-container {
+    height: 171px;
+  }
+
+  header, section, section.prep-time, hr {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  h1.recipe-name {
+    font-size: 35px;
+    margin-bottom: 28px;
+  }
+  
+  header.recipe-header p.text {
+    font-size: 15px;
+  }
+
+  .section.prep-time {
+    margin-top: 36px;
+  }
+
+  ul.prep-list li.list-item:first-child,
+  ul.ingredients-list li.list-item:last-child {
+    position: relative;
+  }
+
+  ul.prep-list li.list-item:first-child::marker,
+  ul.ingredients-list li.list-item:last-child::marker {
+    content: "";
+  }
+
+  ul.prep-list li.list-item:first-child::before {
+    content: "•";
+    font: 700 16px/150% var(--font-outfit);
+    position: absolute;
+    left: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  ul.ingredients-list li.list-item:last-child::before {
+    content: "▪";
+    font: 700 16px/150% var(--font-outfit);
+    position: absolute;
+    left: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .attribution {
+    margin-top: 0;
+    font-size: 16px;
+  }
+}
