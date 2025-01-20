@@ -5,32 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,700,50&family=Montserrat:wght@500..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet/less" type="text/css" href="styles.less" />
+  <script src="https://cdn.jsdelivr.net/npm/less" ></script>
   
   <title>Frontend Mentor | Product preview card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-
-  Perfume
-
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart
+  <main>
+    <article class="product__card">
+      <figure class="product__image-container">
+        <img src="./images/image-product-desktop.jpg" alt="product image" class="product__image" srcset="./images/image-product-desktop.jpg 300w, ./images/image-product-mobile.jpg 343w" sizes="(min-width: 576px) 300px, 343px" />
+      </figure>
+      <section class="product__details">
+        <header class="product__header">
+          <p class="product__header-category">Perfume</p>
+          <h1 class="product__header-title">Gabrielle Essence Eau De Parfum</h1>
+        </header>
+        <p class="product__description">
+          A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+          Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="product__price-container">
+          <span class="product__price--current">$149.99</span>
+          <span class="product__price-original">$169.99</span>
+        </div>
+        <button class="product__add-to-cart">🛒 Add to Cart</button>
+      </section>
+    </article>
+  </main>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer class="attribution">
+    Challenge by <a class="attribution__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a class="attribution__link" href="https://github.com/neo-the-coder" target="_blank">neo-the-coder</a>.
+  </footer>
 </body>
 </html>
