@@ -12,17 +12,12 @@
   <script src="https://cdn.jsdelivr.net/npm/less" ></script>
   
   <title>Frontend Mentor | Product preview card component</title>
-
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <main>
     <article class="product__card">
       <figure class="product__image-container">
-        <img src="./images/image-product-desktop.jpg" alt="product image" class="product__image" srcset="./images/image-product-desktop.jpg 300w, ./images/image-product-mobile.jpg 343w" sizes="(min-width: 576px) 300px, 343px" />
+        <img src="./images/image-product-desktop.jpg" alt="product image" class="product__image" srcset="./images/image-product-desktop.jpg 600w, ./images/image-product-mobile.jpg 686w" sizes="(min-width: 640px) 300px, 343px" />
       </figure>
       <section class="product__details">
         <header class="product__header">
@@ -35,9 +30,11 @@
         </p>
         <div class="product__price-container">
           <span class="product__price--current">$149.99</span>
-          <span class="product__price-original">$169.99</span>
+          <span class="product__price--original">$169.99</span>
         </div>
-        <button class="product__add-to-cart">🛒 Add to Cart</button>
+        <button class="product__add-to-cart">
+            <img src="./images/icon-cart.svg" alt="shopping card" />
+           Add to Cart</button>
       </section>
     </article>
   </main>

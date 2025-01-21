@@ -3,16 +3,14 @@
 @color-neutral-dark: hsl(212, 21%, 14%);
 @color-neutral: hsl(228, 12%, 48%);
 @color-neutral-light: hsl(0, 0%, 100%);
-@min576: ~"(min-width: 576px)";
-@font-size-base: 14px;
-@space: 32px;
-@gap: 20px;
+@min640: ~"(min-width: 640px)";
 @border-radius: 10px;
 
 .font-fraunces {
     font-family: "Fraunces", serif;
     font-optical-sizing: auto;
     font-weight: 700;
+    font-size: 32px;
     font-style: normal;
     line-height: 100%;
     font-variation-settings:
@@ -60,35 +58,56 @@ body {
             display: grid;
             grid-template-columns: 1fr;
 
-            @media @min576 {
+            @media @min640 {
                 width: 600px;
                 grid-template-columns: 1fr 1fr;
             }
         }
 
         &image-container, &image {
-            border-radius: @border-radius;
+            border-top-left-radius: @border-radius;
+            border-top-right-radius: @border-radius;
 
-            @media @min576 {
+            @media @min640 {
                 border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
+                border-bottom-left-radius: @border-radius;
               }
-
-        }
-
-        &image-container {
-
         }
 
         &image {
+            display: block;
             max-width: 100%;
+
+            &-container {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: fade(@color-neutral-dark, 10%);
+                }
+            }
         }
 
         &details {
-            padding: @space;
+            padding: 24px;
+
+            @media @min640 {
+                padding: 32px;
+            }
         }
 
         &header {
+            margin-bottom: 16px;
+
+            @media @min640 {
+                margin-bottom: 24px;
+            }
 
             &-category {
                 .font-montserrat-500();
@@ -97,13 +116,15 @@ body {
                 color: @color-neutral;
                 text-transform: uppercase;
                 letter-spacing: 4.8px;
-                margin-bottom: @gap;
+                margin-bottom: 10px;
+
+                @media @min640 {
+                    margin-bottom: 18px;
+                }
             }
 
             &-title {
                 .font-fraunces();
-                font-size: 32px;
-                margin-bottom: @gap;
             }
         }
 
@@ -111,9 +132,64 @@ body {
             .font-montserrat-500();
             color: @color-neutral;
             font-size: 14px;
-            line-height: 160%;
+            line-height: 1.65;
+        }
+
+        &price {
+
+            &-container {
+                display: flex;
+                align-items: center;
+                column-gap: 19px;
+                margin: 24px 0 18px;
+
+                @media @min640 {
+                    margin: 28.75px 0;
+                }
+            }
+
+            &--current {
+                .font-fraunces();
+                color: @color-primary-dark;
+            }
+
+            &--original {
+                .font-montserrat-500();
+                font-size: 13px;
+                color: @color-neutral;
+                text-decoration: line-through;
+            }
+        }
+
+        &add-to-cart {
+            display: block;
+            width: 100%;
+            padding: 16px;
+
+            border: none;
+            border-radius: @border-radius - 2px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 12px;
+
+            background-color: @color-primary-dark;
+            color: @color-neutral-light;
+            .font-montserrat-700();
+            font-size: 14px;
+        }
+    }
+
+    .attribution {
+        text-align: center;
+        padding: 12px;
+        .font-montserrat-500();
+        color: @color-neutral-light;
+        background-color: @color-primary-dark;
+
+        a {
+            color: @color-primary;
         }
     }
 }
-
-
