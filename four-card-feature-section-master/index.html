@@ -9,38 +9,58 @@
   <script src="https://cdn.jsdelivr.net/npm/less" ></script>
   
   <title>Frontend Mentor | Four card feature section</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <main class="main">
+    <section class="section">
+      <header class="section__header">
+        <h1 class="section__title">Reliable, efficient delivery</h1>
+        <h2 class="section__subtitle">Powered by Technology</h2>
+        <p class="section__description">
+          Our Artificial Intelligence powered tools use millions of project data points
+          to ensure that your project is successful
+        </p>
+        <div class="feature__list">
+          <article class="feature__item">
+            <h3 class="feature__title">Supervisor</h3>
+            <p class="feature__description">
+              Monitors activity to identify project roadblocks
+            </p>
+            <img class="feature__image" src="./images/icon-supervisor.svg" alt="supervisor" />
+          </article>
   
-  Reliable, efficient delivery
-  Powered by Technology
-
-  Our Artificial Intelligence powered tools use millions of project data points 
-  to ensure that your project is successful
-
-  Supervisor
-  Monitors activity to identify project roadblocks
-
-  Team Builder
-  Scans our talent network to create the optimal team for your project
-
-  Karma
-  Regularly evaluates our talent to ensure quality
-
-  Calculator
-  Uses data from past projects to provide better delivery estimates
-
+          <article class="feature__item">
+            <h3 class="feature__title">Team Builder</h3>
+            <p class="feature__description">
+              Scans our talent network to create the optimal team for your project
+            </p>
+            <img class="feature__image" src="./images/icon-team-builder.svg" alt="team builder" />
+          </article>
   
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+          <article class="feature__item">
+            <h3 class="feature__title">Karma</h3>
+            <p class="feature__description">
+              Regularly evaluates our talent to ensure quality
+            </p>
+            <img class="feature__image" src="./images/icon-karma.svg" alt="karma" />
+          </article>
+  
+          <article class="feature__item">
+            <h3 class="feature__title">Calculator</h3>
+            <p class="feature__description">
+              Uses data from past projects to provide better delivery estimates
+            </p>
+            <img class="feature__image" src="./images/icon-calculator.svg" alt="calculator" />
+          </article>
+        </div>
+      </header>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <p class="footer__attribution">
+      Challenge by <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a class="footer__link" href="https://github.com/neo-the-coder" target="_blank">neo-the-coder</a>.
     </p>
   </footer>
 </body>
