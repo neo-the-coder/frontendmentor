@@ -61,59 +61,95 @@ html {
   .section__ {
     
     &container {
-      min-height: 922px;
+      width: auto;
+      width: 375px;
+      padding-left: 32px;
+      padding-right: 32px;
+      @media @min640 {
+        width: auto;
+      }
     }
 
     &header {
       text-align: center;
-      margin-top: 88px;
+      margin-top: 6rem;
+
+      @media @min640 {
+        margin-top: 4rem;
+      }
     }
   
     &title {
       .font-poppins-extralight();
-      font-size: 36px;
+      font-size: 24px;
       letter-spacing: 0.2px;
       margin-bottom: 14px;
+
+      @media @min640 {
+        font-size: 36px;
+      }
     }
   
     &subtitle {      
       .font-poppins-semibold();
-      font-size: 36px;
+      font-size: 24px;
       letter-spacing: 0.25px;
-      margin-bottom: 24px;
+      margin-bottom: 21px;
+      margin-top: -1px;
+
+      @media @min640 {
+        font-size: 36px;
+        margin-top: 15px;
+        margin-bottom: 24px;
+      }
     }
   
     &description {
+      line-height: 1.675;
       font-size: 15px;
       letter-spacing: 0.1px;
+
+      @media @min640 {
+        line-height: inherit;
+        width: 36%;
+        margin: 0 auto;
+      }
     }
   }
   
   .feature__ {
     &list {
-      margin: 61px 165px;
       display: grid;
       align-items: center;
       grid-template-columns: 1fr;
-      gap: 30px;
+      gap: 25px;
+      margin: 5rem auto;
 
       @media @min640 {
         grid-template-columns: repeat(3,1fr);
+        gap: 30px;
+        margin: 61px 165px;
       }
     }
   
     &item {
       position: relative;
       overflow: hidden;
-      width: 350px;
-      height: 250px;
-      padding: 32px;
-      padding-top: 36px;
+      width: auto;
+      height: auto;
+      padding: 28px;
       border-radius: @border-radius;
       border-top-left-radius: @border-radius - 3px;
       border-top-right-radius: @border-radius - 3px;
       background-color: @color-white;
-      box-shadow: 0px 12px 18px fade(@color-blue, 15%);
+      box-shadow: 0px 16px 24px -12px fade(@color-neutral-dark, 30%);
+
+      @media @min640 {
+        width: 350px;
+        height: 250px;
+        padding: 32px;
+        padding-top: 36px;
+      }
 
       &::before {
         content: "";
@@ -123,6 +159,13 @@ html {
         display: block;
         height: 4px;
         width: 100%;
+      }
+
+      &--blue {
+        margin-top: -1px;
+        @media @min640 {
+          margin-top: 0px;
+        }
       }
 
       &--blue::before {
@@ -144,27 +187,55 @@ html {
       &-grouped {
         display: flex;
         flex-direction: column;
-        row-gap: 30px;
+        row-gap: 24px;
+
+        @media @min640 {
+          row-gap: 30px;
+        }
       }
     }
   
     &title {
       .font-poppins-semibold();
       font-size: 20px;
-      letter-spacing: -0.175px;
-      margin-bottom: 13px;
+      margin-top: 3px;
+      margin-bottom: 9px;
+      letter-spacing: 0;
+
+      @media @min640 {
+        margin-top: 0;
+        margin-bottom: 14px;
+        letter-spacing: inherit;
+      }
     }
   
     &description {
       font-size: 13px;
-      letter-spacing: 0.05px;
     }
   
     &image {
       display: block;
       margin-left: auto;
-      margin-top: 40px;
+      margin-top: 31px;
+      width: 57px;
+      height: 57px;
+
+      @media @min640 {
+        margin-top: 38px;
+        width: 64px;
+        height: 64px;
+      }
     }
   }
 
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  color: @color-neutral-dark;
+
+  &__link {
+    color: @color-blue;
+  }
 }
